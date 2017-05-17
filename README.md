@@ -40,6 +40,42 @@ npm run dev  (开发环境)
   <img src="https://github.com/liupeijun/react-router-v4-maizuo/blob/master/screenshot/4.png" width="200" float="left"/>
 </p>
 
+
+# 路由配置
+``` bash
+    const router = (
+      <Router>
+        <App>
+          <Switch> {/*Renders the first child <Route> or <Redirect> that matches the location.*/}
+          <Route path="/home" component={Home} />
+          <Route path="/film" render={()=>
+            <Film>
+              <Switch>{/*Renders the first child <Route> or <Redirect> that matches the location.*/}
+                 <Route path="/film/now-playing" component={NowPlaying}/>
+                 <Route path="/film/coming-soon" component={ComingSoon}/>
+                 <Redirect from="/film" to="/film/now-playing"/> {/*重定向*/}
+              </Switch>
+            </Film>
+          }>
+          </Route>
+          <Route path="/cinema" component={Cinema}>
+          </Route>
+          <Route path="/me" component={Me}>
+          </Route>
+          <Route path="/card" component={Card} >
+          </Route>
+          <Route path="/detail/:kerwinId" render={props=>
+              <Detail {...props}/>
+          }>
+          </Route>
+          <Redirect from="/" to="/home"/> {/*重定向*/}
+          </Switch>
+        </App>
+      </Router>
+    )
+
+```
+
 # 待办事项
 
 >  其他页面完善
