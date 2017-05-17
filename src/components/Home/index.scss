@@ -1,0 +1,29 @@
+.homeplayinglist{
+	margin-top:17px;
+	li{
+		list-style: none;
+		margin: 0 17px 17px 17px;
+	    background-color: #f9f9f9;
+	    -webkit-box-shadow: 0.5px 0.5px 1px #a8a8a8;
+	    -moz-box-shadow: 0.5px 0.5px 1px #a8a8a8;
+	    box-shadow: 0.5px 0.5px 1px #a8a8a8;
+	    cursor: pointer;
+		img{
+			width: 100%;
+		}
+
+		h3{
+			font-size: 12px;
+   			 line-height: 15px;
+		}
+
+		p{
+			    font-size: 8px;
+			    color: #9a9a9a;
+			    line-height: 15px;
+		}
+		&:active{
+
+		}
+	}
+}

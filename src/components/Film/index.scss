@@ -1,0 +1,32 @@
+.filmselected{
+	border-bottom:3px solid red;
+	color:#fe6e00!important;
+}
+
+.filmnav{
+	display:flex;
+	padding:0px 10px;
+	li{
+		flex:1;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		list-style: none;
+
+		a{
+			text-decoration: none;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			
+			&:visited{
+				color:#6a6a6a;
+			}
+
+			&:link{
+				color:#6a6a6a;
+			}
+		}
+	}
+}
+
